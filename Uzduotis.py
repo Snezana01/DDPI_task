@@ -47,9 +47,9 @@ if rank == 0:
   for i in range(0, (len(list_of_files)-1)):
     data = open(list_of_files[i], 'r').read().lower()
     comm.send(data, dest= (i+1), tag = (i+1))
-    print(f'Procesui {i+1} nusiusti failo {list_of_files[i]} duomenys')
+    print("Procesui" + str(i+1) +"nusiusti failo" + str(list_of_files[i]) + "duomenys")
 else:
   data = comm.recv(source=0, tag=rank)
-  print(f'Proceso {rank} skaiciavimai:')
+  print("Proceso" + str(rank) + "skaiciavimai:")
   final = count_word(data)
   print(final)
