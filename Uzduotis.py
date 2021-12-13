@@ -14,7 +14,6 @@ Original file is located at
 #Atspausdinti 10 dazniausiai pasitaikanciu zodziu
 from collections import Counter
 import re
-import multiprocess as mp
 import os
 list_of_files = ["text1.txt","text2.txt","text3.txt", "text4.txt", "text5.txt"]
 symbols = [',','\n','\t','\'','.','\"','!','?','-', '~']
